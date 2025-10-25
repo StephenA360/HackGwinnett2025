@@ -2,12 +2,13 @@ export type RecipeInfo =
 {
     id: string,
     title: string,
+    steps: string[],
 }
 
 export function Recipe({title}: RecipeInfo){
     return(
         <div>
-            <h3>{title}</h3>
+            <button>{title}</button>
         </div>
     )
 }

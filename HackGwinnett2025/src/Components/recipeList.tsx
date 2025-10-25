@@ -2,7 +2,7 @@ import {Recipe, type RecipeInfo} from "./recipe.tsx"
 
 
 
-export function StepList({recipes}: {recipes: RecipeInfo[]}){
+export function RecipeList({recipes}: {recipes: RecipeInfo[]}){
     return(
         <div>
             {recipes.map((recipe) => (
