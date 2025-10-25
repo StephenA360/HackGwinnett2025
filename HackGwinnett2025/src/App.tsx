@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import {RecipeList} from "./Components/recipeList.tsx"
-const 
+import RecipeList from './Components/recipeList.tsx'
+
 function App() {
   const [isVisible, setIsVisible] = useState(false)
   const [currStep, changeStep] = useState(0)
