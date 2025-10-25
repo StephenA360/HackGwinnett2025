@@ -40,3 +40,21 @@
 .read-the-docs {
   color: #888;
 }
+
+.flex-row{
+  display:flex;
+  flex-direction:row;
+}
+
+.flex-column{
+  display:flex;
+  flex-direction:column;
+}
+
+#footer{
+  padding:10px;
+}
+
+button{
+  border-radius:5px;
+}
