@@ -1,6 +1,10 @@
-from flask import Flask, request
+from flask import jsonify, request
 from config import app, db
 from models import Recipe
+
+# Create database tables
+with app.app_context():
+    db.create_all()
 
 @app.route('/recipes', methods=['GET'])
 def get_recipes():
@@ -21,6 +25,10 @@ def add_recipe():
         ingredients=data.get('ingredients', ''),
         instructions=data.get('instructions', '')
     )
+    # Handle steps array
+    if 'steps' in data:
+        new_recipe.set_steps(data['steps'])
+    
     db.session.add(new_recipe)
     db.session.commit()
     return new_recipe.to_json(), 201
@@ -33,6 +41,11 @@ def update_recipe(recipe_id):
     recipe.description = data.get('description', recipe.description)
     recipe.ingredients = data.get('ingredients', recipe.ingredients)
     recipe.instructions = data.get('instructions', recipe.instructions)
+    
+    # Handle steps array
+    if 'steps' in data:
+        recipe.set_steps(data['steps'])
+    
     db.session.commit()
     return recipe.to_json()
 
