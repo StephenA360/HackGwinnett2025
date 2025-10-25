@@ -9,6 +9,7 @@ function App() {
       <StepList steps={[]}/>
       <div className="flex-row" id="footer">
         <button>View Recipes</button>
+        <button>Start Cooking</button>
         <button>Create Recipe</button>
       </div>
     </>

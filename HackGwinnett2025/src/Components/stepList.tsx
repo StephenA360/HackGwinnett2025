@@ -7,12 +7,12 @@ export function StepList({steps}: {steps: StepInfo[]}){
         <div>
             {steps.map((step) => (
                 <div key={step.id}>
-                    <Step id={step.id} title={step.title} description={step.description}/>
+                    <Step id={step.id} title={step.title}/>
                     <br></br>
                 </div>
             ))}
 
-            
+
         </div>
     )
 }
