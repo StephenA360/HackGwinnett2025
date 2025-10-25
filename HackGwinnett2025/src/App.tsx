@@ -36,7 +36,7 @@ function App() {
         steps={pizzaRecipe.steps}
       />
       
-      <RecipeList recipes={[]}/>
+      <RecipeList recipes={[pizzaRecipe]}/>
       
       <div className="flex-row" id="footer">
         <button>View Recipes</button>

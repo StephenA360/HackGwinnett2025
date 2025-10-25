@@ -28,7 +28,6 @@ def add_recipe():
     # Handle steps array
     if 'steps' in data:
         new_recipe.set_steps(data['steps'])
-    
     db.session.add(new_recipe)
     db.session.commit()
     return new_recipe.to_json(), 201
