@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './App.css'
-import {StepList} from "./Components/recipeList.tsx"
+import RecipeList from './Components/recipeList.tsx'
+
 function App() {
   const [count, setCount] = useState(0)
 

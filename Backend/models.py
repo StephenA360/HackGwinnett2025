@@ -31,17 +31,3 @@ class Recipe(db.Model):
             "instructions": self.instructions,
             "steps": self.get_steps()
         }
-    
-class Steps(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    step_number = db.Column(db.Integer, nullable=False)
-    description = db.Column(db.Text, nullable=False)
-    recipe_id = db.Column(db.Integer, db.ForeignKey('recipe.id'), nullable=False)
-
-    def to_json(self):
-        return {
-            "id": self.id,
-            "step_number": self.step_number,
-            "description": self.description,
-            "recipe_id": self.recipe_id
-        }
