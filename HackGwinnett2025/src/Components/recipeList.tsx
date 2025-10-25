@@ -6,6 +6,7 @@ interface Recipe {
     description: string;
     ingredients: string;
     instructions: string;
+    steps: string[];
 }
 
 interface RecipeListProps {
