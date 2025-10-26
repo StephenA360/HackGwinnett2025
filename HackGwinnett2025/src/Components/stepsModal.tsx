@@ -75,6 +75,12 @@ export function StepsModal({
   if (!open) return null; // Nothing fancy here
 
   const text = steps[currentStep] || "—";
+  
+  // Debug logging
+  console.log("Modal open:", open);
+  console.log("Current step:", currentStep);
+  console.log("Steps array:", steps);
+  console.log("Text to display:", text);
 
 
   return (
@@ -128,7 +134,7 @@ export function StepsModal({
           </button>
         </div>
 
-        <div style={{ marginTop: 16, fontSize: 18, lineHeight: 1.6 }}>
+        <div style={{ marginTop: 16, fontSize: 18, lineHeight: 1.6, color: "#000", minHeight: "60px" }}>
           {text}
         </div>
 
